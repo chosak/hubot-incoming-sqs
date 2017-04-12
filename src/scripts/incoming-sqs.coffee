@@ -13,7 +13,11 @@ module.exports = (robot) ->
     robot.logger.error "Disabling incoming-sqs plugin because HUBOT_SQS_QUEUE_URL is not set."
     return
 
-  sqs = new AWS.SQS { region: process.env.AWS_REGION ? 'us-east-1' }
+  sqs = new AWS.SQS {
+    region: process.env.AWS_REGION ? 'us-east-1'
+    accessKeyId: process.env.HUBOT_SQS_AWS_ACCESS_KEY_ID
+    secretAccessKey: process.env.HUBOT_SQS_SECRET_ACCESS_KEY
+  }
 
   receiver = (sqs, queue) ->
     robot.logger.debug "Fetching from #{queue}"

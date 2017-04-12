@@ -24,7 +24,7 @@ e.g.: `https://sqs.us-east-1.amazonaws.com/885581794223/hubot-queue`
 
 ### AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
-AWS-related environment variables are required to be set correctly, so that the bot can access the queue specified above with HUBOT_SQS_QUEUE_URL.
+AWS-related environment variables are required to be set correctly, so that the bot can access the queue specified above with HUBOT_SQS_QUEUE_URL. If you prefer to provide a specific set of AWS credentials for use with this script alone, you can instead define HUBOT_SQS_AWS_ACCESS_KEY_ID and HUBOT_SQS_AWS_SECRET_ACCESS_KEY.
 
 ### AWS_REGION
 
